@@ -1,5 +1,7 @@
+import { HttpRequest, HttpResponse } from '../protocols/http'
+
 export class SignUpController {
-  public handle (httpRequest: any): any {
+  public handle (httpRequest: HttpRequest): HttpResponse {
     const { name, email } = httpRequest.body
 
     if (!name) {
