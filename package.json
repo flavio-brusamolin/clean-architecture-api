@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "check": "npm-check -s -u",
     "test": "jest",
     "test:staged": "jest"
   },
