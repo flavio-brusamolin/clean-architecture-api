@@ -57,7 +57,7 @@ describe('DbAddAccount Use Case', () => {
 
     await sut.add(accountData)
 
-    expect(encryptSpy).toHaveBeenCalledWith('valid_password')
+    expect(encryptSpy).toHaveBeenCalledWith(accountData.password)
   })
 
   test('Should throw if Encrypter throws', async () => {
