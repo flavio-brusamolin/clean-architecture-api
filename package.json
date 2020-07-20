@@ -1,7 +1,7 @@
 {
   "name": "clean-architecture-api",
   "version": "1.0.0",
-  "description": "Node.js API using Typescript, TDD and Clean Architecture",
+  "description": "Node.js API using Typescript, TDD and Clean Architecture.",
   "scripts": {
     "start:dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/main/server.ts",
     "check": "npm-check -s -u",
