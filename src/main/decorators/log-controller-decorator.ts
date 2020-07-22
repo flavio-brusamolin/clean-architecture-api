@@ -4,8 +4,8 @@ import { LogErrorRepository } from '../../data/protocols/db/log/log-error-reposi
 export class LogControllerDecorator implements Controller {
   public constructor (
     private readonly controller: Controller,
-    private readonly logErrorRepository: LogErrorRepository) {
-  }
+    private readonly logErrorRepository: LogErrorRepository
+  ) {}
 
   public async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     const httpResponse = await this.controller.handle(httpRequest)

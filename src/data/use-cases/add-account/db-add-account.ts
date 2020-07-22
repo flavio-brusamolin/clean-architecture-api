@@ -3,8 +3,8 @@ import { AddAccount, AddAccountModel, Account, Hasher, AddAccountRepository } fr
 export class DbAddAccount implements AddAccount {
   public constructor (
     private readonly hasher: Hasher,
-    private readonly addAccountRepository: AddAccountRepository) {
-  }
+    private readonly addAccountRepository: AddAccountRepository
+  ) {}
 
   public async add (accountData: AddAccountModel): Promise<Account> {
     const hashedPassword = await this.hasher.hash(accountData.password)
