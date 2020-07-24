@@ -1,0 +1,29 @@
+version: "3"
+
+services: 
+  mongo:
+    container_name: clean-architecture-db  
+    image: mongo:4.2.8
+    restart: always
+    volumes: 
+      - mongo:/data/db
+    ports:
+      - 27017:27017
+
+  api:
+    container_name: clean-architecture-api
+    build: .
+    image: clean-architecture-api
+    restart: always
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/clean-architecture
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports: 
+      - 8080:8080
+    depends_on:
+      - mongo
+
+volumes: 
+  mongo:

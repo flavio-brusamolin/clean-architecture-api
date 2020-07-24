@@ -1,0 +1,17 @@
+{
+  "name": "Clean Architecture API",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "api",
+  "workspaceFolder": "/usr/src/app",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint"
+  ]
+}
