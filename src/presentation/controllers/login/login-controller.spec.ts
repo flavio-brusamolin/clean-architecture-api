@@ -6,7 +6,7 @@ import { AuthenticationModel } from '../../../domain/use-cases/authentication'
 
 const makeAuthentication = (): Authentication => {
   class AuthenticationStub implements Authentication {
-    public async auth (authentication: AuthenticationModel): Promise<string> {
+    public async auth (_authentication: AuthenticationModel): Promise<string> {
       return 'any_token'
     }
   }
@@ -16,7 +16,7 @@ const makeAuthentication = (): Authentication => {
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {
-    public validate (input: any): Error {
+    public validate (_input: any): Error {
       return null
     }
   }

@@ -22,7 +22,7 @@ const makeFakeAuthentication = (): AuthenticationModel => ({
 
 const makeLoadAccountByEmailRepository = (): LoadAccountByEmailRepository => {
   class LoadAccountByEmailRepositoryStub implements LoadAccountByEmailRepository {
-    public async loadByEmail (email: string): Promise<Account> {
+    public async loadByEmail (_email: string): Promise<Account> {
       return makeFakeAccount()
     }
   }
@@ -32,7 +32,7 @@ const makeLoadAccountByEmailRepository = (): LoadAccountByEmailRepository => {
 
 const makeHashComparer = (): HashComparer => {
   class HashComparerStub implements HashComparer {
-    public async compare (value: string, hash: string): Promise<boolean> {
+    public async compare (_value: string, _hash: string): Promise<boolean> {
       return true
     }
   }
@@ -42,7 +42,7 @@ const makeHashComparer = (): HashComparer => {
 
 const makeEncrypter = (): Encrypter => {
   class EncrypterStub implements Encrypter {
-    public async encrypt (value: string): Promise<string> {
+    public async encrypt (_value: string): Promise<string> {
       return 'any_token'
     }
   }
@@ -52,7 +52,9 @@ const makeEncrypter = (): Encrypter => {
 
 const makeUpdateAccessTokenRepository = (): UpdateAccessTokenRepository => {
   class UpdateAccessTokenRepositoryStub implements UpdateAccessTokenRepository {
-    public async updateAccessToken (id: string, token: string): Promise<void> { }
+    public async updateAccessToken (_id: string, _token: string): Promise<void> {
+      // do nothing
+    }
   }
 
   return new UpdateAccessTokenRepositoryStub()

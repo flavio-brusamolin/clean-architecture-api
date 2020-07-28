@@ -3,7 +3,7 @@ import { AddAccountModel, Hasher, AddAccountRepository, Account } from './db-add
 
 const makeHasher = (): Hasher => {
   class HasherStub implements Hasher {
-    public async hash (value: string): Promise<string> {
+    public async hash (_value: string): Promise<string> {
       return 'hashed_password'
     }
   }
@@ -13,7 +13,7 @@ const makeHasher = (): Hasher => {
 
 const makeAddAccountRepository = (): AddAccountRepository => {
   class AddAccountRepositoryStub implements AddAccountRepository {
-    public async add (accountData: AddAccountModel): Promise<Account> {
+    public async add (_accountData: AddAccountModel): Promise<Account> {
       return makeFakeAccount()
     }
   }

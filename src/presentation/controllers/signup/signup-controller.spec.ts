@@ -5,7 +5,7 @@ import { ok, badRequest, serverError } from '../../helpers/http/http-helper'
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
-    public async add (account: AddAccountModel): Promise<Account> {
+    public async add (_account: AddAccountModel): Promise<Account> {
       return makeFakeAccount()
     }
   }
@@ -15,7 +15,7 @@ const makeAddAccount = (): AddAccount => {
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {
-    public validate (input: any): Error {
+    public validate (_input: any): Error {
       return null
     }
   }

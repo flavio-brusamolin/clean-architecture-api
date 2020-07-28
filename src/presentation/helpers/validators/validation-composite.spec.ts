@@ -4,7 +4,7 @@ import { Validation } from '../../protocols/validation'
 
 const makeValidation = (): Validation => {
   class ValidationStub implements Validation {
-    public validate (input: any): Error {
+    public validate (_input: any): Error {
       return null
     }
   }
