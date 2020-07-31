@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "rimraf dist && tsc",
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/main/server.ts",
+    "dev": "tsnd --inspect=0.0.0.0:9222 --respawn --transpile-only --ignore-watch node_modules --no-notify src/main/server.ts",
     "up": "docker-compose up -d",
     "down": "docker-compose down",
     "check": "npm-check -s -u",
