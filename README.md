@@ -13,7 +13,7 @@ Node.js API using Typescript, TDD and Clean Architecture.
 docker-compose up -d
 ```
 
-## Development
+## Development (Suggestion)
 
 * Install Visual Studio Code "Remote - Containers" extension
 * Select "Reopen in Container" via installed extension
