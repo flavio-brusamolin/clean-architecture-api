@@ -1,3 +1,3 @@
 export * from '../../protocols'
-export * from '../../../domain/use-cases/authentication'
 export * from '../../protocols/validation'
+export * from '../../../domain/use-cases/authentication'
