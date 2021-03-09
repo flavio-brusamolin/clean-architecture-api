@@ -1,9 +1,7 @@
 import { AuthMiddleware } from './auth-middleware'
 import { AccessDeniedError } from '../errors'
 import { forbidden, ok, serverError } from '../helpers/http/http-helper'
-import { HttpRequest } from '../protocols'
-import { LoadAccountByToken } from '../../domain/use-cases/load-account-by-token'
-import { Account } from '../../domain/models/account'
+import { HttpRequest, LoadAccountByToken, Account } from './auth-middleware-protocols'
 
 const makeFakeAccount = (): Account => ({
   id: 'valid_id',
